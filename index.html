@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abiturientska firma</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="toTop">↑</div>
+
+  <div id="main-container" class="container-fluid">
+
+      <div id="heading" class="text-center">
+          <h1><b>Who We Are</b></h1>
+      </div>
+
+      <div id="bg-image">
+          <div class="overlay"></div>
+      </div>
+
+      <div id="content" class="container mt-4 mb-5 p-4 rounded shadow-lg reveal">
+
+          <p class="lead text-center mb-5">
+              We are a student-run firm dedicated to learning, creating, and building innovative solutions
+              that mirror the real business world.  
+              Our company operates just like a real enterprise — with structure, teams, responsibilities, and goals.
+          </p>
+
+          <div class="row text-center my-5 g-4">
+              <div class="col-md-4">
+                  <div class="info-box p-4 h-100">
+                      <h3>Our Mission</h3>
+                      <p>To provide a dynamic learning environment where students develop practical skills, creativity, teamwork, and business-oriented thinking.</p>
+                  </div>
+              </div>
+
+              <div class="col-md-4">
+                  <div class="info-box p-4 h-100">
+                      <h3>Our Vision</h3>
+                      <p>To prepare future professionals by simulating real-world operations, enabling students to grow and evolve in a safe and supportive environment.</p>
+                  </div>
+              </div>
+
+              <div class="col-md-4">
+                  <div class="info-box p-4 h-100">
+                      <h3>Our Values</h3>
+                      <p>Innovation, responsibility, teamwork, professionalism, and continuous learning.</p>
+                  </div>
+              </div>
+          </div>
+
+          <h2 class="section-title mt-5">About Our Firm</h2>
+          <p>
+              Our student firm operates as a fully functional business model where each member has a defined role. 
+              From management and marketing to finance, operations, and creative development — every department plays 
+              an essential part in shaping our success.
+          </p>
+
+          <p>
+              We work on real projects, develop digital products, simulate economic processes, and collaborate as a 
+              united team. This environment helps every member build confidence, leadership qualities, and an 
+              understanding of how professional companies function.
+          </p>
+
+          <p>
+              Our goal is not only to complete tasks but to create meaningful experiences that prepare us for future 
+              careers. Through teamwork, dedication, and creativity, we strive to develop skills that last a lifetime.
+          </p>
+
+      </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+      window.addEventListener("scroll", function () {
+          document.querySelectorAll(".reveal").forEach(el => {
+              let top = el.getBoundingClientRect().top;
+              if (top < window.innerHeight - 80) el.classList.add("active");
+          });
+      });
+
+      let btn = document.getElementById("toTop");
+      window.addEventListener("scroll", () => btn.classList.toggle("show", window.scrollY > 200));
+      btn.onclick = () => window.scrollTo({top: 0, behavior: "smooth"});
+  </script>
+
+</body>
+</html>

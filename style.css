@@ -1,0 +1,127 @@
+:root {
+    --bg-colour: #0d1112;
+    --text-colour: #ffffeb;
+    --accent: #d4c46a;
+}
+
+body {
+    background: radial-gradient(circle at top, #1a1f20, #0d1112 65%);
+    color: var(--text-colour);
+    padding-top: 120px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+
+#heading {
+    padding: 35px 0;
+    animation: fadeDown 1s ease-out;
+}
+
+#heading h1 {
+    text-shadow: 0 0 10px rgba(255,255,235,0.6), 0 0 20px rgba(255,255,235,0.25);
+    letter-spacing: 2px;
+    font-size: 3rem;
+    color: var(--text-colour);
+}
+
+#heading::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--text-colour);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+#bg-image {
+    position: relative;
+    height: 35vh;
+    width: 100%;
+    background-image: url("modern-equipped-computer-lab-min.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#bg-image .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.75));
+    backdrop-filter: blur(2px);
+}
+
+#content {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 40px;
+    border-radius: 20px;
+    color: rgba(255,255,235,0.85);
+    box-shadow: 0 0 22px rgba(0,0,0,0.4), inset 0 0 10px rgba(255,255,235,0.04);
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease;
+}
+
+#content:hover {
+    border-color: rgba(255,255,235,0.2);
+    box-shadow: 0 0 30px rgba(255,255,235,0.08);
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    backdrop-filter: blur(3px);
+    transition: 0.3s ease;
+}
+.info-box h3 {
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+.info-box:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,255,235,0.25);
+}
+
+.section-title {
+    color: var(--accent);
+    text-shadow: 0 0 10px rgba(255,255,235,0.3);
+    margin-bottom: 20px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.9s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#toTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    background: var(--accent);
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: 0.3s;
+    font-size: 22px;
+    font-weight: bold;
+    z-index: 100;
+}
+#toTop.show { opacity: 1; }
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
