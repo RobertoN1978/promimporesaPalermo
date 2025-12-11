@@ -1,0 +1,84 @@
+
+:root {
+  --bg-color: rgb(13, 17, 18);
+  --text-color: rgb(255, 255, 235);
+  --element-color: rgb(100, 100, 100);
+  --element-border: rgb(150, 150, 150);
+  --font: "Inter", sans-serif;
+}
+
+body{
+background-color: var(--bg-color);
+color: var(--text-color) !important;
+font-family: var(--font);
+}
+
+button{
+background-color: var(--element-color);
+color: var(--text-color);
+font-size: 115%;
+padding: 1%;
+margin: 1%;
+margin-left: 0.01%;
+width: 5%;
+height: 30%;
+cursor: pointer;
+border: double;
+border-color: var(--button-border);
+border-radius: 10%;
+display: block;
+}
+
+button:hover{
+  outline: none;
+  border: double #3498db; 
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+textarea, input[type="text"], input[type="email"]{
+    resize:none;
+    background-color: var(--element-color);
+    border-color: var(--element-border);
+    color: var(--text-color);
+    margin: 1%;
+    margin-left: 0.01%;
+    border:double;
+    outline:none;
+}
+
+textarea{
+  width:70%;
+  font-size: 150%;
+}
+
+#name{
+  width:13%;
+}
+
+#email{
+  width: 20%;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 5px rgba(52, 152, 219, 0.5) inset !important;
+  -webkit-text-fill-color: var(--text-color);
+  background-color: var(--element-color);
+  transition: background-color 5000s ease-in-out 0s;
+  border: double, #3498db;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="email"]:focus {
+  outline: none;
+  border: double #3498db; 
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); 
+}
+
+h2{
+  font-size: 200%;
+  font-weight: bold;
+  text-align: center;      
+  margin-top: 1.5%;        
+  margin-bottom: 1.5%;     
+  letter-spacing: 1px;
+}
+

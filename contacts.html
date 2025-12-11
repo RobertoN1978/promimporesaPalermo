@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width,initial-scale=1" />
+ <title>Promimpresa — Contact</title>
+<link rel="stylesheet" href="style-contacts.css">
+</head>
+<body bgcolor = "131718" text="FFFFFF">
+<div>
+<!-- Contact Info -->
+<section>
+<h2 align= "center">Promimpresa-Contacts</h2>
+
+<div>
+<strong>Tel:</strong>
+ <span>0919820968</span>
+ </div>
+<div>
+<br> <strong>Email:</strong>
+ <span>info@proimpresa.it</span>
+ </div>
+<div>
+<br> <strong>Address:</strong>
+ <span>Palermo,Via Sampolo 3 </span>
+ </div>
+<div>
+<br><strong>Working Hours:</strong>
+<br><span>
+<br>
+Monday,Wednesday and Friday: 09:00-13:00
+<br>
+Tuesday and Thursday: 14:00-18:00
+ </span>
+ </div>
+ </section>
+<!-- Contact Form -->
+<section>
+<h2 align= "center">Send a Message</h2>
+<form onsubmit="return sendMail(event)">
+<label>Name:</label>
+<input type="text" id="name" required placeholder="Your Name" spellcheck="false">
+<label>Email:</label>
+<input type="email" id="email" required placeholder="Your Email" spellcheck="false"> <br>
+<label>Message:</label> <br>
+<textarea id="message" required placeholder="Your Message" spellcheck="false"></textarea>
+<button type="submit">Send</button>
+</form>
+<p id="status"></p>
+</section>
+</div>
+<script>
+ function sendMail(e){
+ e.preventDefault();
+ const name = document.getElementById('name').value;
+ const email = document.getElementById('email').value;
+ const msg = document.getElementById('message').value;
+ const mailto = `mailto:info@proimpresa.example?subject=${encodeURIComponent(
+ 'Inquiry from ' + name
+ )}&body=${encodeURIComponent('Email: ' + email + '\n\n' + msg)}`;
+ document.getElementById('status').textContent = "Opening email client...";
+ window.location.href = mailto;
+ return false;
+}
+</script>
+</body>
+</html>
